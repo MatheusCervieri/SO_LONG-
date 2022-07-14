@@ -6,7 +6,7 @@
 #    By: mvieira- <mvieira-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/17 18:18:37 by roaraujo          #+#    #+#              #
-#    Updated: 2022/07/14 17:37:49 by mvieira-         ###   ########.fr        #
+#    Updated: 2022/07/14 18:22:17 by mvieira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,8 @@ SRC_FILES = main.c \
 			exit_game.c \
 			input_validation.c \
 			utils.c \
+			get_next_line.c \
+			open_map.c
 
 SOURCES = $(addprefix $(SRCS_PATH), $(SRC_FILES))
 OBJ_FILES = $(patsubst %.c, %.o, $(SRC_FILES))
