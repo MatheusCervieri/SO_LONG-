@@ -1,5 +1,6 @@
 #include "so_long.h"
 
+
 void open_map_validation(t_game *game)
 {
 	int fd;
@@ -12,6 +13,7 @@ void open_map_validation(t_game *game)
 	if(fd < 0)
 		error_close("Cannot Read File!", game);
 	map_line = get_next_line(fd);
+	ft_printf("%s", map_line);
 	width = ft_strlen(map_line);
 	if(map_line == NULL)
 		error_close("Empty file", game); //PENSAR MELHOR AQUI. 
@@ -19,6 +21,8 @@ void open_map_validation(t_game *game)
 	while(map_line)
 	{
 		map_line = get_next_line(fd);
+		if(map_line != NULL)
+		{
 		if(is_there_nl(map_line) != -1)
 		{
 			if(ft_strlen(map_line) != width)
@@ -26,12 +30,14 @@ void open_map_validation(t_game *game)
 		}
 		if(is_there_nl(map_line) == -1)
 		{
+			if(ft_strlen(map_line) != width - 1)
+				error_close("It is not rectangular!", game);
 		}
-		if(map_line != NULL)
-			ft_printf("%i \n", ft_strlen(map_line));
+	
+			ft_printf("%s", map_line);
 		height++;
+		}
 		free(map_line);
 	}
-	ft_printf("%i",height);
 	close(fd);
 }
