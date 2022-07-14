@@ -6,12 +6,12 @@
 #    By: mvieira- <mvieira-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/17 18:18:37 by roaraujo          #+#    #+#              #
-#    Updated: 2022/07/14 16:18:36 by mvieira-         ###   ########.fr        #
+#    Updated: 2022/07/14 16:47:09 by mvieira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # PATH VARIABLES
-HEADERS_PATH = ./headerfiles/
+HEADERS_PATH = ./headers/
 SRCS_PATH = ./srcs/
 OBJS_PATH = ./objs/
 LIBS_PATH = ./libs/
@@ -31,7 +31,7 @@ MAKE_NOPRINT = $(MAKE) --no-print-directory
 TOUCH = touch -a
 
 # FILES
-NAME = $(BINS_PATH)so_long
+NAME = so_long
 SRC_FILES = main.c \
 
 SOURCES = $(addprefix $(SRCS_PATH), $(SRC_FILES))
@@ -43,7 +43,7 @@ all: $(NAME)
 
 # -> creates executable so_long inside ./bin/
 $(NAME): $(OBJECTS)
-	@$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS) -lmlx -lXext -lX11 
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS) libftprintf.a -lmlx -lXext -lX11 
 	
 # -> creates object files for so_long
 $(OBJS_PATH)%.o : $(SRCS_PATH)%.c

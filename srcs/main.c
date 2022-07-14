@@ -1,6 +1,7 @@
-#include <stdio.h>
-int main()
+#include "so_long.h"
+//int argc, char *argv[]
+int	main()
 {
-	printf("Hello World Makefile \n");
+	ft_printf("O loco meu");
 	return (0);
 }
