@@ -6,4 +6,18 @@
 # include <stdlib.h>
 # include "ft_printf.h"
 
+
+typedef struct s_map
+{
+	char		*map_dir;
+}				t_map;
+
+typedef struct s_game
+{
+	t_map			*map;
+}				t_game;
+
+void input_validation(int argc, char *map_dir, t_game *game);
+void error_close(char *error_message, t_game *game); 
+
 #endif

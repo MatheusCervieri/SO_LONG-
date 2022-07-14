@@ -1,7 +1,8 @@
 #include "so_long.h"
-//int argc, char *argv[]
-int	main()
+
+int	main(int argc, char *argv[])
 {
-	ft_printf("O loco meu");
+	t_game		game; 
+	input_validation(argc, argv[1], &game);
 	return (0);
 }

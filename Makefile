@@ -6,7 +6,7 @@
 #    By: mvieira- <mvieira-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/17 18:18:37 by roaraujo          #+#    #+#              #
-#    Updated: 2022/07/14 16:47:09 by mvieira-         ###   ########.fr        #
+#    Updated: 2022/07/14 17:33:03 by mvieira-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,8 @@ TOUCH = touch -a
 # FILES
 NAME = so_long
 SRC_FILES = main.c \
+			exit_game.c \
+			input_validation.c \
 
 SOURCES = $(addprefix $(SRCS_PATH), $(SRC_FILES))
 OBJ_FILES = $(patsubst %.c, %.o, $(SRC_FILES))
@@ -44,11 +46,15 @@ all: $(NAME)
 # -> creates executable so_long inside ./bin/
 $(NAME): $(OBJECTS)
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS) libftprintf.a -lmlx -lXext -lX11 
+
+# 
 	
 # -> creates object files for so_long
 $(OBJS_PATH)%.o : $(SRCS_PATH)%.c
 	@$(MKDIR) $(OBJS_PATH)
 	@$(CC) $(CFLAGS) -c $< -o $@
+
+# 
 
 # -> mandatory flag for project submission
 bonus: all
