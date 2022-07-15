@@ -8,6 +8,11 @@ int	main(int argc, char *argv[])
 	input_validation(argc, argv[1], &game);
 	open_map_validation(&game);
 	free_game_vars(&game);
-	//new_window(&game);
+	new_window(&game);
+	handle_mlx_key_hooks(&game);
+	mlx_loop(game.mlx);
+	/* we will exit the loop if there's no window left, and execute this code */
+	//mlx_destroy_display(game.mlx);
+	//free(game.mlx);
 	return (0);
 }

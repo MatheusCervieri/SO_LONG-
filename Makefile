@@ -40,7 +40,8 @@ SRC_FILES = main.c \
 			open_map.c \
 			new_window.c \
 			initialization.c \
-			utils2.c
+			utils2.c \
+			handle_mlx_hooks.c
 
 SOURCES = $(addprefix $(SRCS_PATH), $(SRC_FILES))
 OBJ_FILES = $(patsubst %.c, %.o, $(SRC_FILES))
