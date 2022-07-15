@@ -49,6 +49,32 @@ void validation_mid_lines(char *line, t_game *game)
 	}
 }
 
+void gnl_loop(int fd, unsigned int height, unsigned int width, t_game *game, char *map_line)
+{
+	while(map_line)
+	{
+		free(map_line);
+		map_line = get_next_line(fd);
+		if(map_line != NULL)
+		{
+			if(is_there_nl(map_line) != -1)
+			{
+				validation_mid_lines(map_line, game);
+				if(ft_strlen(map_line) != width)
+					error_close("The map is not rectangular!", game);
+			}
+			if(is_there_nl(map_line) == -1) //é a última linha.
+			{
+				validation_first_and_last_line(map_line, game); 
+				if(ft_strlen(map_line) != width - 1)
+					error_close("The map is not rectangular!", game);
+			}
+			ft_printf("%s", map_line);
+			height++;
+		}	
+	}
+}
+
 void open_map_validation(t_game *game)
 {
 	int fd;
@@ -67,29 +93,7 @@ void open_map_validation(t_game *game)
 	width = ft_strlen(map_line);
 	validation_first_and_last_line(map_line, game); 
 	height++;
-	while(map_line)
-	{
-		free(map_line);
-		map_line = get_next_line(fd);
-		if(map_line != NULL)
-		{
-		if(is_there_nl(map_line) != -1)
-		{
-			validation_mid_lines(map_line, game);
-			if(ft_strlen(map_line) != width)
-				error_close("The map is not rectangular!", game);
-		}
-		if(is_there_nl(map_line) == -1) //é a última linha.
-		{
-			validation_first_and_last_line(map_line, game); 
-			if(ft_strlen(map_line) != width - 1)
-				error_close("The map is not rectangular!", game);
-		}
-			ft_printf("%s", map_line);
-			height++;
-		}	
-	}
-	free(map_line);
+	gnl_loop(fd,height,width,game,map_line);
 	validation_map_objects(game);
 	close(fd);
 }
