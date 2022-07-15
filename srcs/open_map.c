@@ -11,19 +11,35 @@ void validation_first_and_last_line(char *line, t_game *game)
 		i++;
 	}
 }
-/*
-void validation_mid_lines(char *line, t_game *game)
+
+void validation_mid_lines(char *line, t_game *game, int width)
 {
 	unsigned int i;
+	unsigned int collectibles;
+	unsigned int exits; 
+	unsigned int players; 
+
+	collectibles = 0;
+	exits = 0;
+	players = 0;
 	i = 0;
+	if(line[0] != '1')
+		error_close("The map must be surrounded by walls", game);
+	if(line[width - 1] != '1')
+		error_close("The map must be surrounded by walls", game);
 	while(line[i] != '\0')
 	{
-		if(line[i] != '1' && line[i] != '\n')
-			error_close("The map must be surrounded by walls", game);
+		if(line[i] == 'C') 
+			collectibles++;
+		if(line[i] == 'E')
+			exits++;
+		if(line[i] == 'P')
+			players++;
+		//verify if the carachters are valid; 
 		i++;
 	}
 }
-*/
+
 
 void open_map_validation(t_game *game)
 {
