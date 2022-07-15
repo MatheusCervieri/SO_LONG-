@@ -38,7 +38,9 @@ SRC_FILES = main.c \
 			utils.c \
 			get_next_line.c \
 			open_map.c \
-			new_window.c
+			new_window.c \
+			initialization.c \
+			utils2.c
 
 SOURCES = $(addprefix $(SRCS_PATH), $(SRC_FILES))
 OBJ_FILES = $(patsubst %.c, %.o, $(SRC_FILES))

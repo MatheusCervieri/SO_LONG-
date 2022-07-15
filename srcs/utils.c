@@ -60,5 +60,36 @@ int	is_there_nl(char *str)
 	return (-1);
 }
 
+char	*ft_strrchr(const char *s, int c)
+{
+	const char	*initial_value;
+	int			i;
 
+	initial_value = s;
+	i = ft_strlen(s);
+	s = (s + i);
+	while (s != initial_value && (unsigned char)c != *s)
+	{
+		s--;
+	}
+	if ((unsigned char)c == *s)
+	{
+		return ((char *) s);
+	}
+	return (0);
+}
 
+void	*ft_calloc(size_t nelem, size_t elsize)
+{
+	void	*allocated_memory;
+	int		over_handling;
+
+	over_handling = nelem * elsize;
+	if (nelem != 0 && over_handling / nelem != elsize)
+		return (NULL);
+	allocated_memory = (void *) malloc (nelem * elsize);
+	if (allocated_memory == NULL)
+		return (NULL);
+	ft_memset(allocated_memory, 0, nelem * elsize);
+	return (allocated_memory);
+}
