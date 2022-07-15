@@ -30,6 +30,7 @@ void open_map_validation(t_game *game);
 void new_window(t_game *game);
 void init_structs_values(t_game *game);
 void initialization_structs(t_game *game);
+void free_game_vars(t_game *game);
 
 //utils. 
 int	ft_strncmp(const char *s1, const char *s2, size_t n); 

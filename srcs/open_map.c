@@ -49,7 +49,6 @@ void validation_mid_lines(char *line, t_game *game)
 	}
 }
 
-
 void open_map_validation(t_game *game)
 {
 	int fd;
@@ -70,6 +69,7 @@ void open_map_validation(t_game *game)
 	height++;
 	while(map_line)
 	{
+		free(map_line);
 		map_line = get_next_line(fd);
 		if(map_line != NULL)
 		{
@@ -87,9 +87,9 @@ void open_map_validation(t_game *game)
 		}
 			ft_printf("%s", map_line);
 			height++;
-		}
-		free(map_line);
+		}	
 	}
+	free(map_line);
 	validation_map_objects(game);
 	close(fd);
 }
