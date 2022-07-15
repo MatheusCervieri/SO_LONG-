@@ -6,7 +6,9 @@
 # include <stdlib.h>
 # include "ft_printf.h"
 # include <fcntl.h> //open, close 
-# include <X11/keysym.h>
+# include <mlx.h>
+# include <X11/keysym.h> //hooks.
+#include  <X11/X.h> //Keypress, release macros. 
 
 # define BUFFER_SIZE 42
 # define MAP_CHARS "01CEP"
@@ -18,12 +20,22 @@ typedef struct s_window
 	int		height;
 }				t_window;
 
+typedef struct s_img
+{
+	void	*img;
+	char	*dir;
+	int		width;
+	int		height;
+}				t_img;
+
+
 typedef struct s_map
 {
 	char		*map_dir;
 	int			collectables;
 	int			exits;
 	int			players;
+	t_img		*wall_img;
 }				t_map;
 
 typedef struct s_game
@@ -42,6 +54,7 @@ void init_structs_values(t_game *game);
 void initialization_structs(t_game *game);
 void free_game_vars(t_game *game);
 void handle_mlx_key_hooks(t_game *game);
+void load_wall_image(t_game *game);
 
 //utils. 
 int	ft_strncmp(const char *s1, const char *s2, size_t n); 
