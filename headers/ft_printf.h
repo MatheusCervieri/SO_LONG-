@@ -16,6 +16,7 @@
 # include <stdarg.h> 
 # include <unistd.h>
 # include <stdlib.h>
+#include <mlx.h>
 
 int				ft_printf(const char *fmt, ...);
 int				write_input(const char *str, va_list args);

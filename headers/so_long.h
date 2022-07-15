@@ -23,6 +23,7 @@ typedef struct s_game
 void input_validation(int argc, char *map_dir, t_game *game);
 void error_close(char *error_message, t_game *game); 
 void open_map_validation(t_game *game);
+void new_window(t_game *game);
 
 //utils. 
 int	ft_strncmp(const char *s1, const char *s2, size_t n); 
