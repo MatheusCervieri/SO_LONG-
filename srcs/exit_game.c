@@ -3,6 +3,7 @@
 
 void free_not_null(void *ptr)
 {
+	//BLABLABLA GITHUB
 	if(ptr != NULL)
 	{
 		free(ptr);
