@@ -7,6 +7,7 @@ int	main(int argc, char *argv[])
 	init_structs_values(&game);
 	input_validation(argc, argv[1], &game);
 	open_map_validation(&game);
+	new_window(&game);
 	exit_game(&game);
 	
 	//free_game_vars(&game);

@@ -43,8 +43,17 @@ void exit_game(t_game *game)
 }
 */
 
+
+
+
 void exit_game(t_game *game)
 {
+	//free window start
+	mlx_destroy_window(game->mlx, game->window->win_ptr);
+	//free mlx start
+	mlx_destroy_display(game->mlx);
+	free(game->mlx);
+	//
 	free_game_vars(game);
 	exit(0);
 }
