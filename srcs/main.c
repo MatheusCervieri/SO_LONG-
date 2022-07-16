@@ -9,8 +9,8 @@ int	main(int argc, char *argv[])
 	open_map_validation(&game);
 	new_window(&game);
 	handle_hooks(&game);
+	load_wall_image(&game);
 	mlx_loop(game.mlx);
-	exit_game(&game);
 	
 	//free_game_vars(&game);
 	/* we will exit the loop if there's no window left, and execute this code */
