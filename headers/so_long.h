@@ -32,6 +32,7 @@ typedef struct s_img
 typedef struct s_map
 {
 	char		*map_dir;
+	char		*map_string; 
 	int			collectables;
 	int			exits;
 	int			players;
@@ -55,6 +56,7 @@ void initialization_structs(t_game *game);
 void free_game_vars(t_game *game);
 void handle_mlx_key_hooks(t_game *game);
 void load_wall_image(t_game *game);
+char	*ft_strjoin_free_s2(char const *s1, char const *s2);
 
 //utils. 
 int	ft_strncmp(const char *s1, const char *s2, size_t n); 
