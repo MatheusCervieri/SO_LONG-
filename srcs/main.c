@@ -11,7 +11,7 @@ int	main(int argc, char *argv[])
 	load_wall_image(&game);
 	handle_mlx_key_hooks(&game);
 	mlx_loop(game.mlx);
-	free_game_vars(&game);
+	//free_game_vars(&game);
 	/* we will exit the loop if there's no window left, and execute this code */
 	//mlx_destroy_display(game.mlx);
 	//free(game.mlx);
