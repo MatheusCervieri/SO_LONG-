@@ -1,45 +1,22 @@
 #include "so_long.h"
-/*
-typedef struct s_data
-{
-	void	*mlx_ptr;
-	void	*win_ptr;
-	int		unused;
-}	t_data;
 
-int	handle_no_event(void *data)
+int	close_game(t_game *game)
 {
-	if(data)
-		return(0);
+	exit_game(game);
+	return(0);
+}
+
+int	keypress(int keycode, t_game *game)
+{
+	if (keycode == XK_Escape || keycode == XK_q)
+		close_game(game);
 	return (0);
 }
 
-
-int	handle_keypress(int keysym, t_game *game)
+void	handle_hooks(t_game *game)
 {
-	if (keysym == XK_Escape)
-		exit_game(game);
-	ft_printf("Keypress: %d\n", keysym);
-	return (0);
+	mlx_hook(game->window->win_ptr, DestroyNotify, NoEventMask, &close_game, game); //if press x.
+	mlx_hook(game->window->win_ptr,
+		KeyPress, KeyPressMask, &keypress, game);
+	//mlx_loop_hook(game->mlx, &render_window, game); -provavelmente é para ficar renderizando.
 }
-
-int	handle_keyrelease(int keysym, void *data)
-{
-	ft_printf("Keyrelease: %d\n", keysym);
-	if(data)
-		return(0);
-	return (0);
-}
-
-void handle_mlx_key_hooks(t_game *game)
-{
-	t_data data;
-
-	data.mlx_ptr = game->mlx;
-	data.win_ptr = game->window->win_ptr;
-	mlx_loop_hook(data.mlx_ptr, &handle_no_event, &data);
-	mlx_hook(data.win_ptr, KeyPress, KeyPressMask, &handle_keypress, &game); 
-	mlx_hook(data.win_ptr, KeyRelease, KeyReleaseMask, &handle_keyrelease, &data); 
-}
-
-*/

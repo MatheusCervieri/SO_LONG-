@@ -56,7 +56,7 @@ void new_window(t_game *game);
 void init_structs_values(t_game *game);
 void initialization_structs(t_game *game);
 void free_game_vars(t_game *game);
-void handle_mlx_key_hooks(t_game *game);
+void handle_hooks(t_game *game);
 void load_wall_image(t_game *game);
 void exit_game(t_game *game);
 void handle_error(char *error_log, t_game *game);
