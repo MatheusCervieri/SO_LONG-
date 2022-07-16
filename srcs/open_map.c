@@ -1,5 +1,4 @@
 #include "so_long.h"
-
 void validation_first_and_last_line(char *line, t_game *game)
 {
 	unsigned int i;
