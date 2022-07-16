@@ -1,5 +1,6 @@
 #include "so_long.h"
 
+/*
 void initialize_imgs(t_game *game)
 {
 	game->map->wall_img = ft_calloc(1, sizeof(t_img));
@@ -19,3 +20,4 @@ void new_window(t_game *game)
 	initialize_imgs(game);
 
 }
+*/

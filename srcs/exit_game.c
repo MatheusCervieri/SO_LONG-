@@ -30,7 +30,7 @@ void free_game_vars(t_game *game)
 	free_not_null((void *)game->window);
 }
 
-
+/*
 void exit_game(t_game *game)
 {
 	destroy_images(game);
@@ -41,12 +41,16 @@ void exit_game(t_game *game)
 	free_window_vars(game);
 	free(game->mlx);
 }
+*/
+
+void exit_game(t_game *game)
+{
+	free_game_vars(game);
+	exit(0);
+}
 
 
-
-
-
-
+//error close:
 
 void error_close(char *error_message, t_game *game)
 {
