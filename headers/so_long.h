@@ -32,7 +32,7 @@ typedef struct s_img
 typedef struct s_map
 {
 	char		*map_dir;
-	char		*map_string;
+	char		*map_string; 
 	int			collectables;
 	int			exits;
 	int			players;

@@ -1,4 +1,5 @@
 #include "so_long.h"
+
 void validation_first_and_last_line(char *line, t_game *game)
 {
 	unsigned int i;
@@ -98,6 +99,3 @@ void open_map_validation(t_game *game)
 	validation_map_objects(game);
 	close(fd);
 }
-
-//map with walls
-//map composition  - 0,1,C,E,P
