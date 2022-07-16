@@ -45,6 +45,8 @@ typedef struct s_game
 	void			*mlx; 
 	t_window		*window; 
 	int				used;
+	char			*error_log; 
+	int				is_there_error;
 }				t_game;
 
 void input_validation(int argc, char *map_dir, t_game *game);
@@ -56,6 +58,8 @@ void initialization_structs(t_game *game);
 void free_game_vars(t_game *game);
 void handle_mlx_key_hooks(t_game *game);
 void load_wall_image(t_game *game);
+void exit_game(t_game *game);
+void handle_error(char *error_log, t_game *game);
 
 //utils. 
 int	ft_strncmp(const char *s1, const char *s2, size_t n); 
