@@ -94,6 +94,7 @@ void open_map_validation(t_game *game)
 	if(map_line == NULL)
 		error_close("Empty file", game); 
 	width = ft_strlen(map_line);
+	game->window->width = width;
 	validation_first_and_last_line(map_line, game); 
 	game->map->map_string = ft_strjoin_free(game->map->map_string, map_line);
 	height++;

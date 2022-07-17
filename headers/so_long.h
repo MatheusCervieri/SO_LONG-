@@ -12,6 +12,7 @@
 
 # define BUFFER_SIZE 42
 # define MAP_CHARS "01CEP"
+# define SPRITE_SIZE 64
 
 typedef struct s_window
 {

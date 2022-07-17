@@ -1,9 +1,6 @@
 #include "so_long.h"
 
-void render_map(t_game *game)
-{
-	
-}
+
 
 int	render_loop(t_game *game)
 {
