@@ -43,7 +43,8 @@ SRC_FILES = main.c \
 			utils2.c \
 			handle_mlx_hooks.c \
 			load_img.c \
-			handle_error.c
+			handle_error.c \
+			render_loop.c
 
 SOURCES = $(addprefix $(SRCS_PATH), $(SRC_FILES))
 OBJ_FILES = $(patsubst %.c, %.o, $(SRC_FILES))

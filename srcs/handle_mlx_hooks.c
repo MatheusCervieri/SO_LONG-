@@ -18,5 +18,5 @@ void	handle_hooks(t_game *game)
 	mlx_hook(game->window->win_ptr, DestroyNotify, NoEventMask, &close_game, game); //if press x.
 	mlx_hook(game->window->win_ptr,
 		KeyPress, KeyPressMask, &keypress, game);
-	//mlx_loop_hook(game->mlx, &render_window, game); -provavelmente é para ficar renderizando.
+	mlx_loop_hook(game->mlx, &render_loop, game);
 }

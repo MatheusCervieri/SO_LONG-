@@ -63,6 +63,7 @@ void handle_hooks(t_game *game);
 void load_wall_image(t_game *game);
 void exit_game(t_game *game);
 void handle_error(char *error_log, t_game *game);
+int	render_loop(t_game *game);
 
 //utils. 
 int	ft_strncmp(const char *s1, const char *s2, size_t n); 
