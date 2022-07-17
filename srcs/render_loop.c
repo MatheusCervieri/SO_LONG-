@@ -27,6 +27,10 @@ void draw_map(t_game *game)
 		{
 			mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->itens_img->img, width * SPRITE_SIZE, height * SPRITE_SIZE);	
 		}
+		if(game->map->map_string[i] == 'P')
+		{
+			mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->player_img->img, width * SPRITE_SIZE, height * SPRITE_SIZE);	
+		}
 		width++;
 		if(game->map->map_string[i] == '\n')
 		{

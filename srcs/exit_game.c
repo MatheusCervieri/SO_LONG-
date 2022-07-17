@@ -42,6 +42,11 @@ void free_window_vars(t_game *game)
 	free_not_null((void *)game->map->itens_img->dir);
 	free_not_null((void *)game->map->itens_img);
 
+	if(game->map->player_img != NULL)
+		mlx_destroy_image(game->mlx, game->map->player_img->img);
+	free_not_null((void *)game->map->player_img->dir);
+	free_not_null((void *)game->map->player_img);
+
 }
 
 

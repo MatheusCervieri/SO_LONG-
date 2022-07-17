@@ -8,6 +8,7 @@ void initialization_structs(t_game *game)
 	game->map->floor_img = ft_calloc(1, sizeof(t_img)); 
 	game->map->exit_img = ft_calloc(1, sizeof(t_img)); 
 	game->map->itens_img = ft_calloc(1, sizeof(t_img)); 
+	game->map->player_img = ft_calloc(1, sizeof(t_img)); 
 	game->map->map_string = ft_strdup("");
 }
 //game->map->wall_img 
@@ -23,6 +24,7 @@ void init_structs_values(t_game *game)
 	game->map->floor_img->dir = ft_strdup( "./resources/images/exit_64.xpm");
 	game->map->itens_img->dir = ft_strdup( "./resources/images/exit_64.xpm"); 
 	game->map->exit_img->dir = ft_strdup( "./resources/images/exit_64.xpm"); 
+	game->map->player_img->dir = ft_strdup( "./resources/images/exit_64.xpm"); 
 
 
 }

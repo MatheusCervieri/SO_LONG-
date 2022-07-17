@@ -40,7 +40,8 @@ typedef struct s_map
 	t_img		*wall_img; //1
 	t_img		*floor_img; //0
 	t_img		*exit_img;
-	t_img		*itens_img; 	
+	t_img		*itens_img; 
+	t_img		*player_img; 	
 }				t_map;
 
 typedef struct s_game
