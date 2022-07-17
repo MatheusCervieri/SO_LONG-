@@ -7,18 +7,17 @@ void initialize_imgs(t_game *game)
 }
 */
 
-
 void new_window(t_game *game)
 {
 	game->mlx = mlx_init();
 	if (game->mlx == NULL)
 		error_close("MLX Error - Can't initialise mlx \n", game);	
 	
-	void *img;
 	int	width = 64; 
 	int height = 64;
-	img = mlx_xpm_file_to_image(game->mlx, "./exit_64.xpm", &width, &height);
-
+	//Initialization wall_img
+	game->map->wall_img->img = mlx_xpm_file_to_image(game->mlx, game->map->wall_img->dir , &width, &height);
+	//error - lidar
 	//new window. 
 	game->window->win_ptr = mlx_new_window(game->mlx, 400, 400, "Hello World");
 	if(game->window->win_ptr == NULL)
@@ -26,7 +25,7 @@ void new_window(t_game *game)
 		free(game->window->win_ptr);
 		error_close("Error \n", game);	
 	}
-	mlx_put_image_to_window(game->mlx, game->window->win_ptr, img, 0, 0);
+	mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->wall_img->img, 0, 0);
 	//initialize_imgs(game);
 
 }

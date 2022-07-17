@@ -10,12 +10,7 @@ void free_not_null(void *ptr)
 		ptr = NULL; 
 	}
 }
-void free_window_vars(t_game *game)
-{
 
-	free_not_null((void *)game->map->wall_img);	
-	free_not_null((void *)game->mlx);	
-}
 void destroy_images(t_game *game)
 {
 	if(game->map->wall_img != NULL)
@@ -28,6 +23,16 @@ void free_game_vars(t_game *game)
 	free_not_null((void *)game->map->map_string);
 	free_not_null((void *)game->map);
 	free_not_null((void *)game->window);
+	
+	
+}
+
+void free_window_vars(t_game *game)
+{
+	if(game->map->wall_img != NULL)
+		mlx_destroy_image(game->mlx, game->map->wall_img->img);
+	free_not_null((void *)game->map->wall_img->dir);
+	free_not_null((void *)game->map->wall_img);
 }
 
 /*
@@ -48,6 +53,7 @@ void exit_game(t_game *game)
 
 void exit_game(t_game *game)
 {
+	free_window_vars(game);
 	//free window start
 	mlx_destroy_window(game->mlx, game->window->win_ptr);
 	//free mlx start
