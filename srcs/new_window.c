@@ -31,7 +31,7 @@ void new_window(t_game *game)
 		free(game->window->win_ptr);
 		error_close("Error \n", game);	
 	}
-	mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->wall_img->img, 0, 0);
+	
 	//mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->floor_img->img, 128, 128);
 	//mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->itens_img->img, 64, 64);
 	//mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->exit_img->img, 200, 200);
