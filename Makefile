@@ -37,14 +37,14 @@ SRC_FILES = main.c \
 			input_validation.c \
 			utils.c \
 			get_next_line.c \
-			open_map.c \
 			new_window.c \
 			initialization.c \
 			utils2.c \
 			handle_mlx_hooks.c \
 			load_img.c \
 			handle_error.c \
-			render_loop.c
+			render_loop.c \
+			open_map.c
 
 SOURCES = $(addprefix $(SRCS_PATH), $(SRC_FILES))
 OBJ_FILES = $(patsubst %.c, %.o, $(SRC_FILES))

@@ -24,16 +24,16 @@ void new_window(t_game *game)
 	game->map->exit_img->img = mlx_xpm_file_to_image(game->mlx, game->map->exit_img->dir , &width, &height);
 	//error - lidar
 	//new window. 
-	game->window->win_ptr = mlx_new_window(game->mlx, game->window->width * SPRITE_SIZE , 400, "Hello World");
+	game->window->win_ptr = mlx_new_window(game->mlx, game->window->width * SPRITE_SIZE , game->window->height * SPRITE_SIZE , "Hello World");
 	if(game->window->win_ptr == NULL)
 	{
 		free(game->window->win_ptr);
 		error_close("Error \n", game);	
 	}
 	mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->wall_img->img, 0, 0);
-	mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->floor_img->img, 128, 128);
-	mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->itens_img->img, 64, 64);
-	mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->exit_img->img, 200, 200);
+	//mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->floor_img->img, 128, 128);
+	//mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->itens_img->img, 64, 64);
+	//mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->exit_img->img, 200, 200);
 	//initialize_imgs(game);
 
 }
