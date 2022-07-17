@@ -15,6 +15,18 @@ void draw_map(t_game *game)
 		{
 			mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->wall_img->img, width * SPRITE_SIZE, height * SPRITE_SIZE);	
 		}
+		if(game->map->map_string[i] == '0')
+		{
+			mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->floor_img->img, width * SPRITE_SIZE, height * SPRITE_SIZE);	
+		}
+		if(game->map->map_string[i] == 'C')
+		{
+			mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->itens_img->img, width * SPRITE_SIZE, height * SPRITE_SIZE);	
+		}
+		if(game->map->map_string[i] == 'E')
+		{
+			mlx_put_image_to_window(game->mlx, game->window->win_ptr, game->map->itens_img->img, width * SPRITE_SIZE, height * SPRITE_SIZE);	
+		}
 		width++;
 		if(game->map->map_string[i] == '\n')
 		{
