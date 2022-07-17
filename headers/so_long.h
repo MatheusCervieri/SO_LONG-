@@ -36,7 +36,10 @@ typedef struct s_map
 	int			collectables;
 	int			exits;
 	int			players;
-	t_img		*wall_img;
+	t_img		*wall_img; //1
+	t_img		*floor_img; //0
+	t_img		*exit_img;
+	t_img		*itens_img; 	
 }				t_map;
 
 typedef struct s_game
