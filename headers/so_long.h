@@ -67,6 +67,9 @@ void exit_game(t_game *game);
 void handle_error(char *error_log, t_game *game);
 int	render_loop(t_game *game);
 void move_right(t_game *game);
+void move_down(t_game *game);
+void move_left(t_game *game);
+void move_up(t_game *game);
 //utils. 
 int	ft_strncmp(const char *s1, const char *s2, size_t n); 
 unsigned int	ft_strlen(const char *s); 
