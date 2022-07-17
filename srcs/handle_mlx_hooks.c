@@ -10,6 +10,8 @@ int	keypress(int keycode, t_game *game)
 {
 	if (keycode == XK_Escape || keycode == XK_q)
 		close_game(game);
+	if (keycode == XK_Right || keycode == XK_d)
+		move_right(game);
 	return (0);
 }
 

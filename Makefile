@@ -44,7 +44,8 @@ SRC_FILES = main.c \
 			load_img.c \
 			handle_error.c \
 			render_loop.c \
-			open_map.c
+			open_map.c \
+			move.c
 
 SOURCES = $(addprefix $(SRCS_PATH), $(SRC_FILES))
 OBJ_FILES = $(patsubst %.c, %.o, $(SRC_FILES))
