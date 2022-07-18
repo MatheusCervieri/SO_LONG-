@@ -89,7 +89,7 @@ void move_up(t_game *game)
 		game->map->map_string[position - width] = 'P';
 		game->movements = game->movements + 1; 
 	}
-	else if(game->map->map_string[position - 1] == 'C')
+	else if(game->map->map_string[position - width] == 'C')
 	{
 		game->map->map_string[position] = '0';
 		game->map->map_string[position - width] = 'P';
@@ -120,7 +120,7 @@ void move_down(t_game *game)
 		game->map->map_string[position + width] = 'P';
 		game->movements = game->movements + 1; 
 	}
-	else if(game->map->map_string[position - 1] == 'C')
+	else if(game->map->map_string[position + width] == 'C')
 	{
 		game->map->map_string[position] = '0';
 		game->map->map_string[position + width] = 'P';

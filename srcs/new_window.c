@@ -25,7 +25,7 @@ void new_window(t_game *game)
 	game->map->player_img->img = mlx_xpm_file_to_image(game->mlx, game->map->player_img->dir , &width, &height);
 	//error - lidar
 	//new window. 
-	game->window->win_ptr = mlx_new_window(game->mlx, (game->window->width - 1) * SPRITE_SIZE , game->window->height * SPRITE_SIZE , "Hello World");
+	game->window->win_ptr = mlx_new_window(game->mlx, (game->window->width - 1) * SPRITE_SIZE , game->window->height * SPRITE_SIZE , "SO_LONG");
 	if(game->window->win_ptr == NULL)
 	{
 		free(game->window->win_ptr);
