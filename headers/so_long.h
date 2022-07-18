@@ -49,6 +49,8 @@ typedef struct s_game
 	t_map			*map;
 	void			*mlx; 
 	t_window		*window; 
+	int				movements; 
+	int				itens_picked; 
 	int				used;
 	char			*error_log; 
 	int				is_there_error;

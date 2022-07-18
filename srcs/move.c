@@ -12,7 +12,7 @@ int get_player_p(char * map_string)
 	return (i);
 }
 
-
+//game -> movements; 
 void move_right(t_game *game)
 {
 	int position;
@@ -21,17 +21,22 @@ void move_right(t_game *game)
 	{
 		game->map->map_string[position] = '0';
 		game->map->map_string[position + 1] = 'P';
+		game->movements = game->movements + 1; 
 	}
 	else if(game->map->map_string[position + 1] == 'C')
 	{
 		game->map->map_string[position] = '0';
 		game->map->map_string[position + 1] = 'P';
+		game->movements = game->movements + 1; 
+		game->itens_picked = game->itens_picked + 1;
 	}
 	else if(game->map->map_string[position + 1] == 'E')
 	{
 		game->map->map_string[position] = '0';
 		game->map->map_string[position + 1] = 'P';
+		game->movements = game->movements + 1; 
 	}
+	ft_printf("You made %i movements \n", game->movements);
 }
 
 void move_left(t_game *game)
