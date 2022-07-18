@@ -1,5 +1,10 @@
 #include "so_long.h"
 
+// descobrir se foi pelo menor caminho.
+// colocar os sprites corretos. 
+// norminette
+// makefile - ler o negócio.  
+
 int	main(int argc, char *argv[])
 {
 	t_game		game; 

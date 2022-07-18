@@ -20,6 +20,7 @@ void init_structs_values(t_game *game)
 	game->map->players = 0;
 	game->is_there_error = 0;
 	game->movements = 0; 
+	game->itens_picked = 0;
 
 	game->map->wall_img->dir = ft_strdup( "./resources/images/wall.xpm"); 
 	game->map->floor_img->dir = ft_strdup( "./resources/images/floor.xpm");
