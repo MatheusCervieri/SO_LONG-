@@ -22,7 +22,7 @@
 # include <X11/keysym.h> 
 # include  <X11/X.h> 
 
-# define SPRITE_SIZE 64
+# define SPRITE_SIZE 80
 # define MAP_CHARS "EP01C"
 
 typedef struct s_window

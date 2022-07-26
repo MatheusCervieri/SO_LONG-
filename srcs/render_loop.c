@@ -14,6 +14,11 @@
 
 void	draw_char(char c, t_game *game, int width, int height)
 {
+	if (c == 'P')
+	{
+		mlx_put_image_to_window(game->mlx, game->window->win_ptr,
+			game->map->player_p, width * SPRITE_SIZE, height * SPRITE_SIZE);
+	}	
 	if (c == '1')
 	{
 		mlx_put_image_to_window(game->mlx, game->window->win_ptr,
@@ -34,11 +39,7 @@ void	draw_char(char c, t_game *game, int width, int height)
 		mlx_put_image_to_window(game->mlx, game->window->win_ptr,
 			game->map->exit_p, width * SPRITE_SIZE, height * SPRITE_SIZE);
 	}
-	if (c == 'P')
-	{
-		mlx_put_image_to_window(game->mlx, game->window->win_ptr,
-			game->map->player_p, width * SPRITE_SIZE, height * SPRITE_SIZE);
-	}	
+
 }
 
 void	draw_map(t_game *game)

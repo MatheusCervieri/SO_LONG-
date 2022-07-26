@@ -46,8 +46,8 @@ void	new_window(t_game *game)
 	game->mlx = mlx_init();
 	if (game->mlx == NULL)
 		exit_game("MLX Error - Can't initialise mlx \n", game);
-	width = 64;
-	height = 64;
+	width = 80;
+	height = 80;
 	game->window->win_ptr = mlx_new_window(game->mlx, (game->window->width - 1)
 			* SPRITE_SIZE, game->window->height * SPRITE_SIZE, "SO_LONG");
 	make_imgs(game, width, height);
