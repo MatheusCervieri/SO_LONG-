@@ -6,7 +6,7 @@
 /*   By: mvieira- <mvieira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 19:27:38 by mvieira-          #+#    #+#             */
-/*   Updated: 2022/07/25 20:13:41 by mvieira-         ###   ########.fr       */
+/*   Updated: 2022/07/26 04:28:30 by mvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ void	new_window(t_game *game)
 	game->mlx = mlx_init();
 	if (game->mlx == NULL)
 		exit_game("MLX Error - Can't initialise mlx \n", game);
-	width = 80;
-	height = 80;
+	width = 64;
+	height = 64;
 	game->window->win_ptr = mlx_new_window(game->mlx, (game->window->width - 1)
 			* SPRITE_SIZE, game->window->height * SPRITE_SIZE, "SO_LONG");
 	make_imgs(game, width, height);

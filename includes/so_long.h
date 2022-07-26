@@ -6,7 +6,7 @@
 /*   By: mvieira- <mvieira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 21:30:01 by mvieira-          #+#    #+#             */
-/*   Updated: 2022/07/26 00:30:47 by mvieira-         ###   ########.fr       */
+/*   Updated: 2022/07/26 04:28:10 by mvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # include <X11/keysym.h> 
 # include  <X11/X.h> 
 
-# define SPRITE_SIZE 80
+# define SPRITE_SIZE 64
 # define MAP_CHARS "EP01C"
 
 typedef struct s_window
