@@ -6,7 +6,7 @@
 /*   By: mvieira- <mvieira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 21:30:01 by mvieira-          #+#    #+#             */
-/*   Updated: 2022/07/26 04:28:10 by mvieira-         ###   ########.fr       */
+/*   Updated: 2022/07/28 03:22:04 by mvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ typedef struct s_window
 	int		height;
 }				t_window;
 
-
 typedef struct s_map
 {
 	char		*map_dir;
@@ -49,7 +48,7 @@ typedef struct s_map
 	char		*exit_dir;
 	char		*itens_dir;
 	char		*player_dir;
-	char		*floor_dir; 
+	char		*floor_dir;
 }				t_map;
 
 typedef struct s_game

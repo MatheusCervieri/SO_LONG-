@@ -6,7 +6,7 @@
 /*   By: mvieira- <mvieira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 21:23:05 by mvieira-          #+#    #+#             */
-/*   Updated: 2022/07/25 19:54:27 by mvieira-         ###   ########.fr       */
+/*   Updated: 2022/07/28 03:02:13 by mvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ void	draw_char(char c, t_game *game, int width, int height)
 		mlx_put_image_to_window(game->mlx, game->window->win_ptr,
 			game->map->exit_p, width * SPRITE_SIZE, height * SPRITE_SIZE);
 	}
-
 }
 
 void	draw_map(t_game *game)
