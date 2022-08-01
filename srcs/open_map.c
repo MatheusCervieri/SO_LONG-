@@ -6,7 +6,7 @@
 /*   By: mvieira- <mvieira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 19:31:06 by mvieira-          #+#    #+#             */
-/*   Updated: 2022/08/01 17:50:49 by mvieira-         ###   ########.fr       */
+/*   Updated: 2022/08/01 17:52:55 by mvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,5 +114,4 @@ void	open_map_validation(t_game *game)
 	if (game->is_there_error == 1)
 		exit_game(game->error_log, game);
 	validation_map_objects(game);
-	
 }
