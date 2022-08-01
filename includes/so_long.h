@@ -6,7 +6,7 @@
 /*   By: mvieira- <mvieira-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 21:30:01 by mvieira-          #+#    #+#             */
-/*   Updated: 2022/07/28 03:22:04 by mvieira-         ###   ########.fr       */
+/*   Updated: 2022/08/01 17:51:49 by mvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ typedef struct s_game
 	t_window		*window;
 	int				movements;
 	int				itens_picked;
-	int				used;
 	char			*error_log;
 	int				is_there_error;
 }				t_game;
