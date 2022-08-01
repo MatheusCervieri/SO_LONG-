@@ -24,6 +24,6 @@ void	input_validation(int argc, char *map_dir, t_game *game)
 	}
 	else
 	{
-	game->map->map_dir = ft_strdup(map_dir);
+		game->map->map_dir = ft_strdup(map_dir);
 	}
 }
